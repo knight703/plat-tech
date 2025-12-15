@@ -447,3 +447,64 @@ ul a:hover {
         width: 100%;
     }
 }
+
+.site-footer {
+    background: black;
+    border-top: 1px solid white;
+    padding: 48px 128px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.footer-left h2 {
+    font-size: 16px;
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 32px;
+}
+
+.footer-nav a {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-nav a:hover {
+    color: red;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    opacity: 0.6;
+    color: white;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-socials a {
+    font-size: 18px;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: red;
+    opacity: 1;
+}
