@@ -261,15 +261,9 @@ ul a:hover {
 }
 
 #activities {
-
     background: black;
     color: white;
     padding: 4rem 0;
-}
-
-.center-title h2 {
-    font-size: 64px;
-    margin: 4rem;
 }
 
 .mayn {
@@ -314,6 +308,7 @@ ul a:hover {
 
 .carousel-item h1 {
     font-size: 55px;
+    font-weight: normal;
 }
 
 .carousel-item p {
@@ -370,5 +365,85 @@ ul a:hover {
 
     100% {
         transform: translateX(0);
+    }
+}
+
+#reviews {
+    background: black;
+    color: white;
+    padding: 6rem 8rem;
+}
+
+.review-box {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.review-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.review-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: .9;
+}
+
+#visit {
+    background: black;
+    padding: 6rem 8rem;
+    color: white;
+}
+
+.visit-container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+#visit iframe {
+    width: 50%;
+    height: 450px;
+    border: 0;
+    border-radius: 12px;
+}
+
+.visit-box {
+    width: 50%;
+}
+
+.visit-box h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.visit-box p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.visit-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.visit-btn:hover {
+    background: white;
+    color: black;
+}
+
+@media(max-width:900px) {
+    .visit-container {
+        flex-direction: column;
+    }
+
+    #visit iframe,
+    .visit-box {
+        width: 100%;
     }
 }
