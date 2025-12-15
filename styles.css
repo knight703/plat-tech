@@ -124,7 +124,7 @@ ul a:hover {
 
 #about {
     padding: 8rem;
-    background: white;
+    background: black;
     /* optional background */
     color: white;
 }
@@ -261,8 +261,15 @@ ul a:hover {
 }
 
 #activities {
+
     background: black;
     color: white;
+    padding: 4rem 0;
+}
+
+.center-title h2 {
+    font-size: 64px;
+    margin: 4rem;
 }
 
 .mayn {
@@ -270,7 +277,6 @@ ul a:hover {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    height: 130vh;
     justify-content: center;
     margin: 0;
     background: black;
