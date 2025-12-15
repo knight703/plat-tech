@@ -259,3 +259,110 @@ ul a:hover {
         opacity: 1;
     }
 }
+
+#activities {
+    background: black;
+    color: white;
+}
+
+.mayn {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 130vh;
+    justify-content: center;
+    margin: 0;
+    background: black;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    animation: scroll 16s linear infinite;
+    display: flex;
+    width: max-content;
+}
+
+.carousel-track.reverse {
+    animation: scrollReverse 16s linear infinite;
+}
+
+.carousel-item {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), var(--bg-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 4px;
+    padding: 32px;
+    text-align: left;
+    width: 600px;
+    height: 400px;
+}
+
+.carousel-item h1 {
+    font-size: 55px;
+}
+
+.carousel-item p {
+    font-size: 25px;
+    opacity: 0.8;
+}
+
+.act1 {
+    --bg-img: url(img/act1.jpg);
+}
+
+.act2 {
+    --bg-img: url(img/act2.jpg);
+}
+
+.act3 {
+    --bg-img: url(img/act3.jpg);
+}
+
+.act4 {
+    --bg-img: url(img/act4.jpg);
+}
+
+.act5 {
+    --bg-img: url(img/act5.jpg);
+}
+
+.act6 {
+    --bg-img: url(img/act6.jpg);
+}
+
+.act7 {
+    --bg-img: url(img/act7.jpeg);
+}
+
+.act8 {
+    --bg-img: url(img/act8.png);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
