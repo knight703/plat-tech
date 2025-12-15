@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 1) 100%), url("img/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+header.scrolled nav {
+    border-bottom: none;
+}
+
+nav {
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 1rem 0;
+    margin: 0 8rem;
+}
+
+.logo {
+    color: white;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+ul a:hover {
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 1rem;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    color: white;
+    font-size: 4rem;
+    margin: 0 8rem;
+}
+
+#landmarks {
+    background: black;
+    padding: 4rem 8rem;
+}
+
+.center-title {
+    text-align: center;
+}
+
+.center-title p {
+    color: gray;
+    font-size: 28px;
+}
+
+.center-title h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+    gap: 2rem;
+}
+
+.descriptions {
+    margin: 1rem 0;
+    color: white;
+    text-align: center;
+}
+
+.landmark img {
+    width: 400px;
+}
+
+#about {
+    padding: 8rem;
+    background: black;
+    /* optional background */
+    color: white;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    /* responsive stacking on small screens */
+}
+
+.about-content img {
+    width: 100%;
+    max-width: 600px;
+    /* image width limit */
+    /* optional rounded corners */
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+    /* text takes remaining space */
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-text h2 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        /* stack image on top of text */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content img {
+        max-width: 90%;
+    }
+}
+
+#history {
+    background-color: black;
+    color: white;
+    padding: 8rem 8rem 2rem 8rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.history-carousel {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+}
+
+.history-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    animation: fadeHistory 10s infinite;
+    transition: opacity 1s ease-in-out;
+}
+
+.history-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.history-slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide-left {
+    width: 45%;
+}
+
+.slide-left h1 {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+}
+
+.slide-left h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.slide-left p {
+    font-size: 2rem;
+    line-height: 1.6;
+}
+
+.history-slide img {
+    width: 50%;
+    object-fit: cover;
+}
+
+@keyframes fadeHistory {
+
+    0%,
+    55%,
+    100% {
+        opacity: 0;
+    }
+
+    10%,
+    45% {
+        opacity: 1;
+    }
+}
